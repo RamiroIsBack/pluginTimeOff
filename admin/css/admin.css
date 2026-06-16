@@ -1,0 +1,162 @@
+/* =====================================================================
+   Time Off – Admin styles
+   ===================================================================== */
+
+.timeoff-wrap { max-width: 1200px; }
+
+/* Navegación de año */
+.timeoff-year-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 12px 0 20px;
+    font-size: 16px;
+}
+.timeoff-year-nav strong { font-size: 20px; }
+
+/* KPIs */
+.timeoff-kpis {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.timeoff-kpi {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 18px 28px;
+    text-align: center;
+    min-width: 140px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.kpi-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+}
+.kpi-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+.kpi-pending  .kpi-number { color: #f0ad4e; }
+.kpi-approved .kpi-number { color: #5cb85c; }
+.kpi-employees .kpi-number { color: #337ab7; }
+
+/* Toolbar */
+.timeoff-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.timeoff-filters {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Tablas */
+.timeoff-table th, .timeoff-table td { vertical-align: middle !important; }
+.timeoff-zero { color: #d9534f; font-weight: 700; }
+
+/* Badges de estado */
+.timeoff-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #fff;
+}
+.timeoff-badge-pending  { background: #f0ad4e; }
+.timeoff-badge-approved { background: #5cb85c; }
+.timeoff-badge-rejected { background: #d9534f; }
+
+/* Filas coloreadas en lista de solicitudes */
+.timeoff-row-approved { background: #f6fff6 !important; }
+.timeoff-row-rejected { background: #fff6f6 !important; }
+
+/* Mensajes vacíos */
+.timeoff-empty { color: #888; font-style: italic; }
+
+/* Leyenda del calendario */
+.timeoff-legend {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.legend-dot  { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+/* Calendario FullCalendar */
+#timeoff-calendar {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 8px;
+}
+.fc-event { cursor: pointer; }
+
+/* Checklist de empleados en grupos de cobertura */
+.timeoff-employee-checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 6px;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    background: #fafafa;
+}
+.timeoff-check-label {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 2px 0;
+}
+.timeoff-check-label input { cursor: pointer; }
+
+/* Popover de evento */
+#timeoff-event-popover {
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    max-width: 280px;
+}
+.popover-inner p { margin: 4px 0; font-size: 13px; color: #555; }
+
+/* Modal rechazo */
+#timeoff-reject-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeoff-modal-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    width: 400px;
+    max-width: 90vw;
+}
+.timeoff-modal-box h3 { margin-top: 0; }

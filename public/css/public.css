@@ -1,0 +1,148 @@
+/* =====================================================================
+   Time Off – Frontend styles
+   ===================================================================== */
+
+.timeoff-public-wrap { max-width: 800px; margin: 0 auto; font-family: inherit; }
+
+/* Contador de días */
+.timeoff-counter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.counter-item {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 90px;
+    flex: 1;
+}
+.counter-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+.counter-lbl {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+.counter-fixed    .counter-num { color: #337ab7; }
+.counter-approved .counter-num { color: #5cb85c; }
+.counter-pending  .counter-num { color: #f0ad4e; }
+.counter-available .counter-num { color: #5cb85c; }
+.counter-zero .counter-num { color: #d9534f; }
+
+/* Avisos */
+.timeoff-notice {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+.timeoff-notice-info    { background: #d0e9ff; border-left: 4px solid #337ab7; }
+.timeoff-notice-warning { background: #fff3cd; border-left: 4px solid #f0ad4e; }
+.timeoff-notice-success { background: #dff0d8; border-left: 4px solid #5cb85c; }
+.timeoff-notice-error   { background: #f2dede; border-left: 4px solid #d9534f; }
+
+/* Formulario */
+.timeoff-form-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.timeoff-form-box h3 { margin-top: 0; }
+
+.timeoff-field-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.timeoff-field-row label { font-weight: 600; font-size: 14px; }
+.timeoff-field-row input[type="date"],
+.timeoff-field-row textarea {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+.timeoff-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity .15s;
+}
+.timeoff-btn:hover { opacity: .85; }
+.timeoff-btn-primary { background: #337ab7; color: #fff; }
+.timeoff-btn-danger  { background: #d9534f; color: #fff; font-size: 12px; padding: 5px 12px; }
+
+/* Tabla frontend */
+.timeoff-table-front {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.timeoff-table-front th,
+.timeoff-table-front td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+}
+.timeoff-table-front th { background: #f5f5f5; font-weight: 600; }
+
+/* Badges */
+.timeoff-badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+.timeoff-badge-pending  { background: #f0ad4e; }
+.timeoff-badge-approved { background: #5cb85c; }
+.timeoff-badge-rejected { background: #d9534f; }
+
+/* Leyenda */
+.timeoff-legend {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-dot  { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+/* Calendario */
+#timeoff-my-calendar {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+}
